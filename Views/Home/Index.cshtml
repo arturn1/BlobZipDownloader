@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Download Blobs";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg rounded">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Download Blobs como ZIP</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Home" asp-action="DownloadZip">
+                        <div class="mb-3">
+                            <label for="connectionString" class="form-label">Connection String</label>
+                            <input type="text" class="form-control" id="connectionString" name="connectionString" placeholder="Insira a string de conexão" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="folderPath" class="form-label">Caminho da Pasta no Blob</label>
+                            <input type="text" class="form-control" id="folderPath" name="folderPath" placeholder="Ex: pasta/subpasta/" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-download"></i> Baixar ZIP
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
